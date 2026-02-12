@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- ================= DASHBOARD HEADER ================= -->
+<div class="dashboard-header">
+    <h2>📊 Disaster Monitoring Dashboard</h2>
+    <p>
+        Real-time overview of reported disasters, severity levels,
+        coordination progress, and emergency response status
+        across affected regions.
+    </p>
+</div>
+
+<!-- ================= STATS GRID ================= -->
+<div class="grid">
+
+    <!-- Total Reports -->
+    <div class="box">
+        <div class="box-icon">📁</div>
+        <div class="box-title">Total Reports</div>
+        <div class="box-value">{{ total }}</div>
+        <div class="box-desc">All reported disasters</div>
+    </div>
+
+    <!-- High Severity -->
+    <div class="box">
+        <div class="box-icon">🚨</div>
+        <div class="box-title">High Severity</div>
+        <div class="box-value">{{ high }}</div>
+        <div class="box-desc">Critical emergency cases</div>
+    </div>
+
+    <!-- Resolved Cases -->
+    <div class="box">
+        <div class="box-icon">✅</div>
+        <div class="box-title">Resolved Cases</div>
+        <div class="box-value">{{ resolved }}</div>
+        <div class="box-desc">Successfully coordinated</div>
+    </div>
+
+</div>
+
+<!-- ================= SYSTEM FEATURES SECTION ================= -->
+<div class="dashboard-info">
+    <h3>⚙ System Capabilities</h3>
+    <ul>
+        <li>✔ Separate Resource Database Management</li>
+        <li>✔ Location-Based Resource Allocation</li>
+        <li>✔ Real-Time Coordination Logic</li>
+        <li>✔ Dynamic Resource Availability Updates</li>
+        <li>✔ Automated Notification System</li>
+    </ul>
+</div>
+
+{% endblock %}

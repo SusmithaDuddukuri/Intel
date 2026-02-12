@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- ================= HEADER ================= -->
+<div class="home-header">
+    <h1>🌍 Disaster Response Coordinator</h1>
+    <p>
+        An intelligent disaster management system that enables real-time
+        disaster reporting, smart resource allocation, and efficient
+        emergency coordination using location-based resource tracking.
+    </p>
+</div>
+
+<!-- ================= REPORT CARD ================= -->
+<div class="card report-card">
+
+    <h2>🚨 Report a Disaster</h2>
+
+    <p class="form-description">
+        Submit disaster details below. The system will automatically allocate 
+        appropriate authorities and available resources based on severity and location.
+    </p>
+
+    <form method="POST">
+
+        <!-- Disaster Type -->
+        <label for="dtype">Disaster Type</label>
+        <input 
+            type="text" 
+            id="dtype"
+            name="dtype" 
+            placeholder="e.g. Flood, Earthquake, Cyclone"
+            required
+        >
+
+        <!-- Location -->
+        <label for="location">Location</label>
+        <input 
+            type="text" 
+            id="location"
+            name="location" 
+            placeholder="Enter affected area"
+            required
+        >
+
+        <!-- Severity -->
+        <label for="severity">Severity Level</label>
+        <select name="severity" id="severity" required>
+            <option value="Low">Low - Minor impact</option>
+            <option value="Medium">Medium - Moderate impact</option>
+            <option value="High">High - Critical emergency</option>
+        </select>
+
+        <button type="submit" class="btn-primary">
+            Submit Report
+        </button>
+
+    </form>
+</div>
+
+{% endblock %}

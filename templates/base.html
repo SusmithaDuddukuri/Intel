@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disaster Response Coordinator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-left">
+        <span class="logo">🌍 Disaster Response Coordinator</span>
+    </div>
+
+    <div class="nav-right">
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/history">History</a>
+
+        <a href="/admin" class="notification-link">
+            Admin
+            {% if global_unread > 0 %}
+            <span class="notification-badge">{{ global_unread }}</span>
+            {% endif %}
+        </a>
+
+        <a href="/contact">Contact</a>
+        <a href="/logout" class="logout">Logout</a>
+    </div>
+</nav>
+
+<main class="container">
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>

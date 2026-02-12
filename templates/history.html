@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="history-container">
+
+    <h2 class="history-title">📜 Disaster History & Case Records</h2>
+
+    <p class="history-subtitle">
+        Overview of major disasters handled by the system, including 
+        coordinated response and resource allocation strategies.
+    </p>
+
+    <div class="history-grid">
+
+        <!-- Flood -->
+        <div class="history-card">
+            <img src="{{ url_for('static', filename='images/flood.jpg') }}" alt="Flood">
+            <div class="history-content">
+                <h3>🌊 Major Floods</h3>
+                <p>
+                    Severe floods caused by heavy rainfall required rapid 
+                    water rescue teams, medical units, and relief distribution.
+                </p>
+            </div>
+        </div>
+
+        <!-- Earthquake -->
+        <div class="history-card">
+            <img src="{{ url_for('static', filename='images/earthquake.jpg') }}" alt="Earthquake">
+            <div class="history-content">
+                <h3>🌍 Earthquakes</h3>
+                <p>
+                    Structural collapses required emergency response forces, 
+                    rescue equipment allocation, and coordinated evacuation.
+                </p>
+            </div>
+        </div>
+
+        <!-- Cyclone -->
+        <div class="history-card">
+            <img src="{{ url_for('static', filename='images/cyclone.jpg') }}" alt="Cyclone">
+            <div class="history-content">
+                <h3>🌪 Cyclones</h3>
+                <p>
+                    Coastal regions were evacuated, and relief resources 
+                    were distributed using location-based coordination logic.
+                </p>
+            </div>
+        </div>
+
+        <!-- Wildfire -->
+        <div class="history-card">
+            <img src="{{ url_for('static', filename='images/wildfire.jpg') }}" alt="Wildfire">
+            <div class="history-content">
+                <h3>🔥 Wildfires</h3>
+                <p>
+                    Rapid fire containment strategies were implemented 
+                    with dynamic resource tracking and emergency alerts.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

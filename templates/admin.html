@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- ================= NOTIFICATION BOX ================= -->
+{% if unread_count > 0 %}
+<div class="notification-box">
+    🔔 {{ unread_count }} New Disaster Report(s)
+</div>
+{% endif %}
+
+<h2>🛠 Admin Panel</h2>
+
+<div class="table-container">
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Location</th>
+        <th>Severity</th>
+        <th>Authority</th>
+        <th>Resources Assigned</th>
+        <th>Status</th>
+        <th>Coordination</th>
+        <th>Action</th>
+    </tr>
+
+    {% for d in data %}
+    <tr>
+        <td>{{ d[0] }}</td>
+        <td>{{ d[1] }}</td>
+        <td>{{ d[2] }}</td>
+        <td>
+            <span class="severity {{ d[3]|lower }}">
+                {{ d[3] }}
+            </span>
+        </td>
+        <td>{{ d[4] }}</td>
+        <td>{{ d[5] }}</td>
+        <td>{{ d[6] }}</td>
+        <td>{{ d[7] }}</td>
+        <td>
+            {% if d[6] != "Resolved" %}
+                <a class="btn-resolve" href="/resolve/{{ d[0] }}">Resolve</a>
+            {% endif %}
+            <a class="btn-delete" href="/delete/{{ d[0] }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+
+{% endblock %}
