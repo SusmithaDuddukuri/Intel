@@ -118,6 +118,8 @@ are provided for lifesaving decisions.
 
     st.markdown("<br>", unsafe_allow_html=True)
 
+# UI improved for better user experience
+
 # ---------- SERVICES ----------
 if selected == "Services":
 

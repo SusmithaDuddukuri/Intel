@@ -134,6 +134,7 @@ streamlit run app.py
 * Connect with **real patient databases**
 * Add **voice input support**
 * Improve **accuracy using ML**
+* Add **ML-based triage model**
 
 ---
 
