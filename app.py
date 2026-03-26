@@ -33,7 +33,7 @@ p, label, span, div {
 
 /* Streamlit specific elements */
 .stMarkdown, .stText, .stSelectbox, .stTextInput, .stTextArea {
-    color: black !important;
+    color: white !important;
 }
 
 /* Cards */
