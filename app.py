@@ -16,18 +16,32 @@ background-position: center;
 background-attachment: fixed;
 }
 
-.card{
-padding:20px;
-border-radius:15px;
-box-shadow:0 4px 10px rgba(0,0,0,0.15);
-
-/* 👇 ADD THIS */
-color: black !important;
+/* 👇 Make ALL text black */
+html, body, [class*="css"], .stApp {
+    color: black !important;
 }
 
-/* 👇 Ensure headings & text inside cards are black */
-.card h1, .card h2, .card h3, .card h4, .card p {
-color: black !important;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: black !important;
+}
+
+/* Paragraphs & labels */
+p, label, span, div {
+    color: black !important;
+}
+
+/* Streamlit specific elements */
+.stMarkdown, .stText, .stSelectbox, .stTextInput, .stTextArea {
+    color: black !important;
+}
+
+/* Cards */
+.card {
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    color: black !important;
 }
 </style>
 """
