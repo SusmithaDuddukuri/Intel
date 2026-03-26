@@ -8,7 +8,6 @@ st.set_page_config(page_title="Emergency Response Assistant", layout="wide")
 # ---------- Background ----------
 page_bg = """
 <style>
-/* Page background */
 [data-testid="stAppViewContainer"] {
     background-image: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
     url("https://images.unsplash.com/photo-1580281657527-47a3b2f9b1a2");
@@ -17,15 +16,13 @@ page_bg = """
     background-attachment: fixed;
 }
 
-/* Card styling */
 .card {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    color: black !important; /* ensures card text is black */
+    color: black !important;
 }
 
-/* Input boxes, textarea, select, and button text */
 input, textarea, select, .stSelectbox, .stTextInput, .stTextArea {
     color: black !important;
     background-color: white !important;
@@ -45,17 +42,15 @@ input::placeholder, textarea::placeholder {
     color: black !important;
     background-color: white !important;
 }
-/* Force all headings and paragraph text to black */
+
 h1, h2, h3, h4, h5, h6, p, span, div {
     color: black !important;
 }
 
-/* Keep cards black text */
 .card {
     color: black !important;
 }
 
-/* Inputs, dropdowns, textareas, buttons */
 input, textarea, select, .stSelectbox, .stTextInput, .stTextArea {
     color: black !important;
     background-color: white !important;
@@ -75,6 +70,12 @@ input::placeholder, textarea::placeholder {
     color: black !important;
     background-color: white !important;
 }
+
+.stSelectbox div[role="combobox"] {
+    color: black !important;
+    background-color: white !important;
+}
+
 </style>
 """
 st.markdown(page_bg, unsafe_allow_html=True)
