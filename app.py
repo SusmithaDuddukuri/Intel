@@ -61,7 +61,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .stButton button {
-    color: black !important;
+    color: white !important;
     background-color: #06b6d4 !important;
     font-weight: bold;
 }
