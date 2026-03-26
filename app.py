@@ -45,6 +45,36 @@ input::placeholder, textarea::placeholder {
     color: black !important;
     background-color: white !important;
 }
+/* Force all headings and paragraph text to black */
+h1, h2, h3, h4, h5, h6, p, span, div {
+    color: black !important;
+}
+
+/* Keep cards black text */
+.card {
+    color: black !important;
+}
+
+/* Inputs, dropdowns, textareas, buttons */
+input, textarea, select, .stSelectbox, .stTextInput, .stTextArea {
+    color: black !important;
+    background-color: white !important;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #555 !important;
+}
+
+.stButton button {
+    color: black !important;
+    background-color: #06b6d4 !important;
+    font-weight: bold;
+}
+
+.stSelectbox div[role="option"] {
+    color: black !important;
+    background-color: white !important;
+}
 </style>
 """
 st.markdown(page_bg, unsafe_allow_html=True)
