@@ -6,43 +6,47 @@ from streamlit_option_menu import option_menu
 st.set_page_config(page_title="Emergency Response Assistant", layout="wide")
 
 # ---------- Background ----------
-st.markdown("""
+page_bg = """
 <style>
-/* Make all text black */
-h1, h2, h3, h4, h5, h6, p, label, span, div {
-    color: black !important;
+/* Page background */
+[data-testid="stAppViewContainer"] {
+    background-image: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+    url("https://images.unsplash.com/photo-1580281657527-47a3b2f9b1a2");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-/* Card text */
+/* Card styling */
 .card {
-    color: black !important;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    color: black !important; /* ensures card text is black */
 }
 
-/* Input boxes, textarea, and select */
+/* Input boxes, textarea, select, and button text */
 input, textarea, select, .stSelectbox, .stTextInput, .stTextArea {
     color: black !important;
     background-color: white !important;
 }
 
-/* Placeholder text */
 input::placeholder, textarea::placeholder {
     color: #555 !important;
 }
 
-/* Button text */
 .stButton button {
     color: black !important;
-    background-color: #06b6d4 !important;  /* Optional: keep button visible */
+    background-color: #06b6d4 !important;
     font-weight: bold;
 }
 
-/* Streamlit-specific dropdown fixes */
 .stSelectbox div[role="option"] {
     color: black !important;
     background-color: white !important;
 }
 </style>
-""", unsafe_allow_html=True)
+"""
 st.markdown(page_bg, unsafe_allow_html=True)
 
 # ---------- NAVBAR ----------
