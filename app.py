@@ -16,23 +16,25 @@ background-position: center;
 background-attachment: fixed;
 }
 
-/* 👇 Make ALL text black */
-html, body, [class*="css"], .stApp {
+/* ✅ Text everywhere */
+h1, h2, h3, h4, h5, h6, p, label, span, div {
     color: black !important;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
+/* ✅ Fix input boxes */
+input, textarea, select {
     color: black !important;
+    background-color: white !important;
 }
 
-/* Paragraphs & labels */
-p, label, span, div {
+/* ✅ Streamlit selectbox & text area fix */
+.stSelectbox div, .stTextInput div, .stTextArea textarea {
     color: black !important;
+    background-color: white !important;
 }
 
-/* Streamlit specific elements */
-.stMarkdown, .stText, .stSelectbox, .stTextInput, .stTextArea {
+/* Buttons */
+button {
     color: white !important;
 }
 
