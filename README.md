@@ -79,3 +79,8 @@ streamlit run app.py
 
 ## 🙌 Final Thoughts
 This project helped me understand how important speed and simplicity are in real-world applications. Even a basic system can be useful if it gives quick and clear results.
+
+## 💬 My Experience
+While building this project, I ran into a few issues, especially with handling different types of symptom inputs. 
+At one point, I tried adding more complex logic, but it actually made the system slower. 
+So I simplified the approach, and that worked better for both speed and clarity.
