@@ -72,7 +72,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .stSelectbox div[role="combobox"] {
-    color: black !important;
+    color: white !important;
     background-color: white !important;
 }
 
