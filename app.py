@@ -6,49 +6,43 @@ from streamlit_option_menu import option_menu
 st.set_page_config(page_title="Emergency Response Assistant", layout="wide")
 
 # ---------- Background ----------
-page_bg = """
+st.markdown("""
 <style>
-[data-testid="stAppViewContainer"]{
-    background-image: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
-    url("https://images.unsplash.com/photo-1580281657527-47a3b2f9b1a2");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* All text in app black */
+/* Make all text black */
 h1, h2, h3, h4, h5, h6, p, label, span, div {
     color: black !important;
 }
 
-/* Cards text */
+/* Card text */
 .card {
     color: black !important;
 }
 
-/* Inputs & Textareas */
-input, textarea, select {
+/* Input boxes, textarea, and select */
+input, textarea, select, .stSelectbox, .stTextInput, .stTextArea {
     color: black !important;
     background-color: white !important;
 }
 
-/* Streamlit-specific fixes for selectbox and text input */
-.stSelectbox div, .stSelectbox span, .stTextInput div, .stTextArea textarea {
-    color: black !important;
-    background-color: white !important;
-}
-
-/* Placeholder text fix */
+/* Placeholder text */
 input::placeholder, textarea::placeholder {
     color: #555 !important;
 }
 
-/* Buttons */
-button {
-    color: white !important;
+/* Button text */
+.stButton button {
+    color: black !important;
+    background-color: #06b6d4 !important;  /* Optional: keep button visible */
+    font-weight: bold;
+}
+
+/* Streamlit-specific dropdown fixes */
+.stSelectbox div[role="option"] {
+    color: black !important;
+    background-color: white !important;
 }
 </style>
-"""
+""", unsafe_allow_html=True)
 st.markdown(page_bg, unsafe_allow_html=True)
 
 # ---------- NAVBAR ----------
