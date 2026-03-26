@@ -9,41 +9,43 @@ st.set_page_config(page_title="Emergency Response Assistant", layout="wide")
 page_bg = """
 <style>
 [data-testid="stAppViewContainer"]{
-background-image: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
-url("https://images.unsplash.com/photo-1580281657527-47a3b2f9b1a2");
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
+    background-image: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+    url("https://images.unsplash.com/photo-1580281657527-47a3b2f9b1a2");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-/* ✅ Text everywhere */
+/* All text in app black */
 h1, h2, h3, h4, h5, h6, p, label, span, div {
     color: black !important;
 }
 
-/* ✅ Fix input boxes */
+/* Cards text */
+.card {
+    color: black !important;
+}
+
+/* Inputs & Textareas */
 input, textarea, select {
     color: black !important;
     background-color: white !important;
 }
 
-/* ✅ Streamlit selectbox & text area fix */
-.stSelectbox div, .stTextInput div, .stTextArea textarea {
+/* Streamlit-specific fixes for selectbox and text input */
+.stSelectbox div, .stSelectbox span, .stTextInput div, .stTextArea textarea {
     color: black !important;
     background-color: white !important;
+}
+
+/* Placeholder text fix */
+input::placeholder, textarea::placeholder {
+    color: #555 !important;
 }
 
 /* Buttons */
 button {
     color: white !important;
-}
-
-/* Cards */
-.card {
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.15);
-    color: black !important;
 }
 </style>
 """
