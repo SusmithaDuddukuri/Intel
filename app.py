@@ -20,6 +20,14 @@ background-attachment: fixed;
 padding:20px;
 border-radius:15px;
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
+
+/* 👇 ADD THIS */
+color: black !important;
+}
+
+/* 👇 Ensure headings & text inside cards are black */
+.card h1, .card h2, .card h3, .card h4, .card p {
+color: black !important;
 }
 </style>
 """
